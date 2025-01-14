@@ -1,0 +1,5 @@
+docker build . -t proiect-datc:latest
+
+docker tag proiect-datc miruna2001/proiectdatc
+
+docker push miruna2001/proiectdatc

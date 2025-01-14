@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Coiny&family=Sono:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link href="style.css" rel="stylesheet" />
+  <title>City Map</title>
+</head>
+<html>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <img src="logo.png" height="68" width="68" alt="Ambrosia Alert" />
+          <a
+            href="http://localhost:3000/"
+            style="text-decoration: none; color: inherit"
+          >
+            <h1>Ambrosia Alert</h1>
+          </a>
+        </div>
+        <button id="scrollToTopBtn" title="Go to top">&#9650;</button>
+        <button class="btn btn-large">
+          <a href="map.html"> City Map </a>
+        </button>
+        <button class="btn btn-large">
+          <a href="reports.html"> Reports </a>
+        </button>
+        <button id="scrollToTopBtn" title="Go to top">&#9650;</button>
+      </header>
+    </div>
+
+    <div id="googleMap" style="width: 100%; height: 400px"></div>
+
+    <!-- Include the Google Maps API script with the callback to initMap -->
+    <script src="script.js"></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJfEYTeFlBt0zweOYi1v2Otq5W_JHIT4w&callback=initMap"
+    ></script>
+
+    <!-- Include the script.js file after the Google Maps API script -->
+  </body>
+</html>

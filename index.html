@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coiny&family=Sono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="style.css" rel="stylesheet" />
+    <title>Ambrosia Alert</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <img src="logo.png" height="68" width="68" alt="Ambrosia Alert" />
+          <h1>Ambrosia Alert</h1>
+        </div>
+        <button id="scrollToTopBtn" title="Go to top">&#9650;</button>
+        <button class="btn btn-large" >
+           <a href="map.html" target="_blank"> City Map </a> 
+          </button>
+        <button class="btn btn-large btn-open">
+          Share an ambrosia infestation place
+        </button>
+      </header>
+
+      <form class="fact-form hidden">
+        <input type="text" placeholder="Share information" />
+        <span>200</span>
+        <input type="da" placeholder="Share date" />
+        <select>
+          <option value="">Choose city area:</option>
+          <option value="cetate">Cetate</option>
+          <option value="aradului">Aradului</option>
+          <option value="blascovici">Blascovici</option>
+          <option value="sagului">Sagului</option>
+          <option value="mehala">Mehala</option>
+          <option value="elisabetin">Elisabetin</option>
+          <option value="plopi">Plopi</option>
+          <option value="iosefin">Iosefin</option>
+          <option value="fratelia">Fratelia</option>
+          <option value="ciarda">Ciarda Rosie</option>
+          <option value="torontarului">Torontalului</option>
+          <option value="soarelui">Soarelui</option>
+          <option value="girocului">Girocului</option>
+          <option value="fabric">Fabric</option>
+          <option value="freidorf">Freidorf</option>
+          <option value="lipovei">Lipovei</option>
+          <option value="braytim">Braytim</option>
+          <option value="circumvalatiunii">Circumvalatiunii</option>
+          <option value="ronat">Ronat</option>
+          <option value="complex">Complexul Studentesc</option>
+          <option value="tipografilor">Tipografilor</option>
+          <option value="ghiroda">Ghiroda</option>
+          <option value="padurea">Padurea Verde</option>
+          <option value="dumbravita">Dumbravita</option>
+          <option value="mosnita">Mosnita Noua</option>
+          <option value="giroc">Giroc</option>
+          <option value="urseni">Urseni</option>
+        </select>
+        <button class="btn btn-large">Post</button>
+      </form>
+
+      <main class="main">
+        <aside>
+          <ul>
+            <li>
+                <div class="overlay" id="overlay"></div>
+                <div class="login-container" id="loginContainer">
+                  <form class="login-form">
+                    <label for="name">Username:</label>
+                    <input type="text" id="name" name="name" required>
+            
+                    <label for="adress">Adress:</label>
+                    <input type="adress" id="adress" name="adress" required>
+            
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+            
+                    <button class="btn-login" type="button" onclick="closeLoginForm()">Close</button>
+                    <button class="btn-login" type="submit">Check</button>
+                  </form>
+                </div>
+                <button class="btn btn-all-categories" onclick="openLoginForm()">Login</button>
+              </li>
+            <li class="category">
+              <button class="btn btn-all-categories">All</button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #3b82f6"
+              >
+                Cetate
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #fa8072"
+              >
+                Aradului
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #9fe2bf"
+              >
+                Blascovici
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #cc99ff"
+              >
+                Sagului
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #de3163"
+              >
+                Mehala
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #28b463"
+              >
+                Elisabetin
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #cd6155"
+              >
+                Plopi
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #2e4053"
+              >
+                Iosefin
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #8d6e63"
+              >
+                Fratelia
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #1abc9c"
+              >
+                Ciarda Rosie
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #5f6a6a"
+              >
+                Torontalului
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #330033"
+              >
+                Soarelui
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #f9e79f"
+              >
+                Girocului
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #d35400"
+              >
+                Fabric
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #6c3483"
+              >
+                Freidorf
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #95a5a6"
+              >
+                Lipovei
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #e91e63"
+              >
+                Braytim
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #5499c7"
+              >
+                Circumvalatiunii
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #9a7d0a"
+              >
+                Ronat
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #c2875f"
+              >
+                Complexul Studentesc
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #c25f8b"
+              >
+                Tipografilor
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #24acab"
+              >
+                Ghiroda
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #c1251c"
+              >
+                Padurea Verde
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #665a8a"
+              >
+                Dumbravita
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #1f4629"
+              >
+                Mosnita Noua
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #d06fac"
+              >
+                Giroc
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #4dacaf"
+              >
+                Urseni
+              </button>
+            </li>
+          </ul>
+        </aside>
+
+        <section>
+          <ul class="fact-list">
+            <li class="fact">
+              <p>
+                Everything looks safe around here.
+                <a
+                  class="source"
+                  href="https://opensource.fb.com/"
+                  target="_blank"
+                  >(Source)</a
+                >
+                <p>date input</p>
+              </p>
+              <span class="tag" style="background-color: #3b82f6">cetate</span>
+              <div class="vote-buttons">
+                <button>👍 24</button>
+                <button>⛔️ 4</button>
+              </div>
+            </li>
+
+            <li class="fact">
+              <p>
+                There are a few plants around the Olimpia gym. Definetely needs more checks.
+
+                <a
+                  class="source"
+                  href="https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids"
+                  target="_blank"
+                  >(Source)</a
+                >
+              </p>
+              <span class="tag" style="background-color: #c2875f">complexul studentesc</span>
+              <div class="vote-buttons">
+                <button>👍 1</button>
+                <button>⛔️ 8</button>
+              </div>
+            </li>
+
+            <li class="fact">
+                <p>
+                  There is a whole field with ambrosia just on the entry of Georges Bizet, be careful.
+  
+                  <a
+                    class="source"
+                    href="https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids"
+                    target="_blank"
+                    >(Source)</a
+                  >
+                </p>
+                <span class="tag" style="background-color: #1abc9c">ciarda rosie</span>
+                <div class="vote-buttons">
+                  <button>👍 20</button>
+                  <button>⛔️ 1</button>
+                </div>
+              </li>
+
+              <li class="fact">
+                <p>
+                  Berlin street is full of these plants. Stay safe.
+  
+                  <a
+                    class="source"
+                    href="https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids"
+                    target="_blank"
+                    >(Source)</a
+                  >
+                </p>
+                <span class="tag" style="background-color: #1f4629">mosnita</span>
+                <div class="vote-buttons">
+                  <button>👍 11</button>
+                  <button>⛔️ 0</button>
+                </div>
+              </li>
+
+          </ul>
+        </section>
+      </main>
+    </div>
+
+
+  <!-- Overlay background -->
+  
+  <!-- Login form container -->
+  
+  
+  <script src="script.js"> </script>
+  </body>
+</html>
